@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.owner.untitlednew.SquareActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Value"
+
+        tools:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        />
+
+    <Button
+        android:id="@+id/area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area"
+        android:onClick="onClickArea"
+        app:layout_constraintTop_toBottomOf="@+id/value"
+        />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="301dp"
+        android:layout_height="88dp"
+        android:text="0"
+        android:textSize="40sp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@+id/resultBrief"
+        />
+
+    <Button
+        android:id="@+id/perimeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perimeter"
+        android:onClick="onClickPerimeter"
+        app:layout_constraintTop_toBottomOf="@+id/value"
+        app:layout_constraintLeft_toRightOf="@+id/area"
+        />
+
+    <TextView
+        android:id="@+id/resultBrief"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Result below"
+        android:textSize="30sp"
+
+        app:layout_constraintTop_toBottomOf="@id/area"
+        />
+    <Button
+        android:id="@+id/savebut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:onClick="onClickSave"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        />
+
+</android.support.constraint.ConstraintLayout>
